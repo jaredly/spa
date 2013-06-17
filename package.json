@@ -1,0 +1,25 @@
+{
+  "name": "spa",
+  "version": "0.0.0",
+  "description": "Learn spanish by reading the Book of Mormon",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": "http://github.com/jabapyth/spa.git",
+  "keywords": [
+    "learn",
+    "spanish",
+    "lds",
+    "book",
+    "of",
+    "mormon"
+  ],
+  "author": "Jared Forsyth",
+  "license": "MIT",
+  "readmeFilename": "Readme.md",
+  "dependencies": {
+    "express": "~3.2.6",
+    "superagent": "~0.14.9"
+  }
+}

@@ -1,0 +1,157 @@
+
+html {
+  font-family: Times, serif;
+  font-size: 12pt;
+}
+.title {
+  text-align: center;
+}
+.todo {
+  color: red;
+}
+.done {
+  color: green;
+}
+.tag {
+  background-color: #add8e6;
+  font-weight:normal
+}
+.target {
+}
+.timestamp {
+  color: #bebebe;
+}
+.timestamp-kwd {
+  color: #5f9ea0;
+}
+.right {margin-left:auto;
+        margin-right:0px;
+        text-align:right;}
+.left {margin-left:0px;
+       margin-right:auto;
+       text-align:left;}
+.center {margin-left:auto;
+         margin-right:auto;
+         text-align:center;}
+p.verse {
+  margin-left: 3%
+}
+pre {
+  border: 1pt solid #AEBDCC;
+  background-color: #F3F5F7;
+  padding: 5pt;
+  font-family: courier, monospace;
+  font-size: 90%;
+  overflow:auto;
+}
+table {
+  border-collapse: collapse;
+}
+td, th {
+  vertical-align: top;
+}
+th.right {
+  text-align:center;
+}
+th.left {
+  text-align:center;
+}
+th.center {
+  text-align:center;
+}
+td.right {
+  text-align:right;
+}
+td.left {
+  text-align:left;
+}
+td.center {
+  text-align:center;
+}
+dt {
+  font-weight: bold;
+}
+div.figure {
+  padding: 0.5em;
+}
+div.figure p {
+  text-align: center;
+}
+div.inlinetask {
+  padding:10px;
+  border:2px solid gray;
+  margin:10px;
+  background: #ffffcc;
+}
+textarea {
+  overflow-x: auto;
+}
+.linenr {
+  font-size:smaller
+}
+.code-highlighted {background-color:#ffff00;}
+.org-info-js_info-navigation {
+  border-style:none;
+}
+#org-info-js_console-label {
+  font-size:10px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+.org-info-js_search-highlight {
+  background-color:#ffff00;
+  color:#000000;
+  font-weight:bold;
+}
+/** My Stuff **/
+#content {
+  width: 40em;
+  float: left;
+}
+#content p {
+  width: 20em;
+  line-height: 2.5;
+  float: left;
+  display: block;
+}
+p.spanish {
+  clear: both;
+}
+p.english {
+  position: relative;
+  left: -20em;
+  top: 21px;
+  color: #999;
+  pointer-events: none;
+}
+#translationbox {
+  position: fixed;
+  top: 20px;
+  bottom: 20px;
+  left: 25em;
+  width: 650px;
+  border: 2px solid #ddd;
+  font-family: sans-serif;
+  z-index: 300;
+  background-color: white;
+  padding: 20px;
+  overflow: auto;
+}
+.exB:before {
+  content: "\21D2 ";
+  margin-right: 10px;
+  color: green;
+}
+#translationbox li {
+  list-style: circle;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 600px;
+}
+
+.tip {
+  pointer-events: none;
+}

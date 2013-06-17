@@ -1,0 +1,22 @@
+{
+  "name": "spa",
+  "repo": "jabapyth/spa",
+  "description": "Learn spanish by reading the Book of Mormon",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/tip": "*",
+    "component/aurora-tip": "*",
+    "visionmedia/superagent": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "assets/index.js",
+  "scripts": [
+    "assets/index.js"
+  ],
+  "styles": [
+    "assets/got.css",
+    "assets/spa.css"
+  ]
+}
