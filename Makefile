@@ -8,4 +8,7 @@ components: component.json
 clean:
 	rm -fr build components template.js
 
+serve:
+	nodemon index.js
+
 .PHONY: clean

@@ -11,6 +11,11 @@ var $ = document.querySelectorAll.bind(document)
   , trans = document.getElementById('translationbox')
   , BASEURL = 'http://www.spanishdict.com/translate/';
 
+request.get('/es.json').end(function(res){
+  window.dictionary = res.body;
+  console.log(Object.keys(res.body).length);
+});
+
 var getWord = function (word) {
   // iframe.src = BASEURL + word;
   request.get('/api/full')
@@ -21,7 +26,7 @@ var getWord = function (word) {
 };
 
 var clean = function(word) {
-  return escape(word.replace(/^[.,;'"]+/, '').replace(/[.,;'"]+$/, ''));
+  return escape(word.replace(/^[\(\)\.,;'"\s]+/, '').replace(/[\(\)\.,;'"\s]+$/, ''));
 };
 var good = function (node) {
   return node.tagName == 'SPAN' && node.parentNode.className == 'spanish';
@@ -94,7 +99,25 @@ var hasWord = function (word, next) {
     next(localStorage[word]);
     return true;
   }
+  if (dictionary[word]) {
+    next(format(dictionary[word]));
+    return true;
+  }
+  next('nope: ' + word); 
+  return true;
   return false;
+};
+
+var format = function (defs) {
+  var words = [];
+  Object.keys(defs).forEach(function(key){
+    defs[key].forEach(function(word){
+      if (words.indexOf(word) === -1) {
+        words.push(word);
+      }
+    });
+  });
+  return words.join('<br>');
 };
 
 var quickWord = function (word, next) {
